@@ -1,0 +1,21 @@
+
+
+.section__header {
+    flex-grow: 1;
+    font-size: 30px;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+    margin: 0px;
+}
+
+.section__container {
+    display: flex;
+}
+
+@media (max-width:675px) {
+    .section__container {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
