@@ -10,7 +10,7 @@ const Tasks = ({ tasks, hideDoneTasks, done }) => (
                     <button className={`section__taskButton section__taskButton--checked`}>
                         {done ? "✔" : ""}
                     </button>
-                    <span className={`section__task js-task ${done ? "section__task--completed" : ""}`}>
+                    <span className={`section__task ${done ? "section__task--completed" : ""}`}>
                         {content}
                     </span>
                     <button className={`section__taskButton section__taskButton--deleted`}>
