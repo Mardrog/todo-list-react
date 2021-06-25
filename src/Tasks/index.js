@@ -3,15 +3,15 @@ import "./style.css";
 const Tasks = ({ tasks, hideDoneTasks, done }) => (
     <div className="section__tasksContainer">
         <ul className="section__tasksList">
-            {tasks.map(task => (
-                <li
+            {tasks.map(({ id, done, content }) => (
+                <li key={id}
                     className={`section__tasksListItem ${hideDoneTasks && done ? "section__tasksListItem--hidden" : ""}`}
                 >
                     <button className={`section__taskButton section__taskButton--checked`}>
-                        {task.done ? "✔" : ""}
+                        {done ? "✔" : ""}
                     </button>
-                    <span className={`section__task js-task ${task.done ? "section__task--completed" : ""}`}>
-                        {task.content}
+                    <span className={`section__task js-task ${done ? "section__task--completed" : ""}`}>
+                        {content}
                     </span>
                     <button className={`section__taskButton section__taskButton--deleted`}>
                         🗑
