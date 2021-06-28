@@ -11,11 +11,9 @@ const Buttons = ({ tasks, hideDoneTasks }) => (
             <button
                 className="section__buttons section__buttons--rightButton"
                 disabled={tasks.every(({ done }) => done)}>
-
                 Ukończ wszystkie
             </button>
         </div>
-
     )
 );
 

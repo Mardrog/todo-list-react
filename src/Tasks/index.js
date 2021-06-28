@@ -17,7 +17,8 @@ const Tasks = ({ tasks, hideDoneTasks, done }) => (
                         🗑
                     </button>
                 </li>
-            ))}
+            ))
+            }
         </ul >
     </div>
 );

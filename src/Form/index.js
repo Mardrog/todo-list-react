@@ -6,14 +6,11 @@ const Form = () => (
             name="section__newTaskButton"
             className="section__input"
             placeholder="Co jest do zrobienia?"
-            autoFocus 
-            required />
-            
-        <button
-            className="section__newTaskButton">Dodaj zadanie
-        </button>
+            autoFocus
+            required
+        />
+        <button className="section__newTaskButton">Dodaj zadanie</button>
     </form>
-    
 );
 
 
