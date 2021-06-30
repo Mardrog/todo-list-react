@@ -1,12 +1,12 @@
 
 import "./style.css";
 
-const Buttons = ({ tasks, hideDoneTasks }) => (
+const Buttons = ({ tasks, hideDone }) => (
     tasks.length > 0 && (
         <div className="section__buttonsContainer">
             <button
                 className="section__buttons section__buttons--leftButton">
-                {hideDoneTasks === true ? "Pokaż ukończone" : "Ukryj ukończone"}
+                {hideDone === true ? "Pokaż ukończone" : "Ukryj ukończone"}
             </button>
             <button
                 className="section__buttons section__buttons--rightButton"
