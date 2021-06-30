@@ -15,7 +15,7 @@
 
 .section__buttons--rightButton:disabled {
     color: grey;
-    font-size: 25px;
+    font-size: 20px;
     border: none;
     background: none;
 }
