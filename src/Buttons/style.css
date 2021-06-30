@@ -10,11 +10,10 @@
     background: none;
     color: hsl(180, 100%, 25%);
     transition: 0.5s;
-    
 }
 
 .section__buttons--rightButton:disabled {
-    color: grey;
+    color: hsl(0, 0%, 80%);
     font-size: 20px;
     border: none;
     background: none;
@@ -29,7 +28,7 @@
 }
 
 .section__buttons--rightButton:disabled:hover {
-    color: grey;
+    color: hsl(0, 0%, 80%);
 }
 
 @media (max-width:675px) {
