@@ -4,9 +4,14 @@ import "./style.css";
 const Form = ({ addNewTask }) => {
     const [content, setNewTaskContent] = useState("");
 
+    const contentTrimmed = content.trim()
+
     const onFormSubmit = (event) => {
         event.preventDefault();
-        addNewTask(content.trim());
+        if (!contentTrimmed) {
+            return;
+        }
+        addNewTask(contentTrimmed);
         setNewTaskContent("");
     };
 
