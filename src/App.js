@@ -6,12 +6,14 @@ import Container from "./Container";
 import Header from "./Header";
 import { useState } from "react";
 
-
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [tasks, setTasks] = useState(
-    []
-  );
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
+
+  const saveDataInLocalStorage = () => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  };
+  saveDataInLocalStorage();
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
@@ -49,7 +51,7 @@ function App() {
         id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
       }
     ])
-  }
+  };
 
   return (
     <Container>
@@ -58,7 +60,13 @@ function App() {
       />
       <Section
         header="Dodaj nowe zadanie"
-        formContainer={<Form addNewTask={addNewTask} />}
+        formContainer={
+          <Form
+            addNewTask={addNewTask}
+            tasks={tasks}
+            setTasks={setTasks}
+          />
+        }
       />
       <Section
         header="Lista zadań"
