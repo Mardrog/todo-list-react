@@ -13,7 +13,6 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
                         onClick={() => toggleTaskDone(id)}
                     >
                         {done ? "✔" : ""}
-
                     </button>
                     <span className={`section__task ${done ? "section__task--completed" : ""}`}>
                         {content}

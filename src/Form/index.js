@@ -26,7 +26,6 @@ const Form = ({ addNewTask }) => {
                 value={content}
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-
             <button className="section__newTaskButton">Dodaj zadanie</button>
         </form>
     );
