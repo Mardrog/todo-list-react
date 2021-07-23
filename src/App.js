@@ -4,6 +4,7 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Container from "./Container";
 import Header from "./Header";
+import Timer from "./Timer";
 import { useState } from "react";
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
         title="Lista zadań"
       />
       <Section
+        timer={
+          <Timer />
+        }
         header="Dodaj nowe zadanie"
         formContainer={
           <Form

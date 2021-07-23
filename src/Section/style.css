@@ -1,16 +1,15 @@
-
-
 .section__header {
     flex-grow: 1;
     font-size: 30px;
     padding: 20px;
-    background-color: white;
-    border-bottom: 1px solid #dddddd;
     margin: 0px;
 }
 
 .section__container {
     display: flex;
+    background-color: white;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
 }
 
 @media (max-width:675px) {
