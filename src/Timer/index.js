@@ -1,16 +1,21 @@
+import { useState } from "react";
 import "./style.css";
 
-const Timer = (props) => {
+const Timer = () => {
 
     const date = new Date();
+    const [time, setTime] = useState(date.toLocaleString());
+
+    setInterval((time) => {
+        time = new Date();
+        setTime(time.toLocaleString());
+    }, 1000)
 
     return (
         <div className="timer">
-            <p className="timer__paragraph">{date.toLocaleString("pl-PL", { weekday: "long", day: "numeric", month: "long", year: "numeric" })} {date.toLocaleTimeString()}</p>
+            <p className="timer__paragraph">{time}</p>
         </div>
     )
-
 };
-
 
 export default Timer;
