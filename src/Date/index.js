@@ -8,7 +8,8 @@ const Timer = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setTime(time => time.toLocaleString());
+            const time = new Date();
+            setTime(time.toLocaleString());
         }, 1000);
         return () => {
             clearInterval(intervalId);
