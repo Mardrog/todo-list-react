@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 
 const Timer = () => {
@@ -6,10 +6,11 @@ const Timer = () => {
     const date = new Date();
     const [time, setTime] = useState(date.toLocaleString());
 
-    setInterval((time) => {
-        time = new Date();
-        setTime(time.toLocaleString());
-    }, 1000)
+    useEffect(() => {
+        setInterval(() => {
+            setTime(time => time.toLocaleString());
+        }, 1000)
+    }, []);
 
     return (
         <div className="timer">
