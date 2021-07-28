@@ -3,6 +3,20 @@
 ## [Demo](https://mardrog.github.io/todo-list-react/)
 ## Description
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Was create to learn about Create React App. For example how to move around folders, how to import, export files. How to write scripts, styles and html code.
+Was added local storage code and date.
+
+## Screens and gif representing the site
+First step is to enter some task into input and then click "Dodaj zadanie". 
+![first_screen](/src/Images/screen1.png)
+
+Your task will be added below i "Lista zadań sestion"
+![second_screen](/src/Images/screen2.png)
+
+When you task is already added, you can mark it as a done using green button on the left and later delete using red button on the right
+![third_screen](/src/Images/screen3.png)
+
+### Gif showing site in work
+![gif](/src/Images/site_in_work.gif)
 ## Available Scripts
 
 In the project directory, you can run:
