@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Container from "./Container";
 import Header from "./Header";
-import Timer from "./Timer";
+import Timer from "./Date";
 import { useState } from "react";
 
 function App() {
