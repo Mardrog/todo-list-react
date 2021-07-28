@@ -7,9 +7,12 @@ const Timer = () => {
     const [time, setTime] = useState(date.toLocaleString());
 
     useEffect(() => {
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             setTime(time => time.toLocaleString());
-        }, 1000)
+        }, 1000);
+        return () => {
+            clearInterval(intervalId);
+        };
     }, []);
 
     return (
