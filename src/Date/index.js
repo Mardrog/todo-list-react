@@ -3,13 +3,11 @@ import "./style.css";
 
 const Timer = () => {
 
-    const date = new Date();
-    const [time, setTime] = useState(date.toLocaleString());
+    const [time, setTime] = useState(new Date());
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            const time = new Date();
-            setTime(time.toLocaleString());
+            setTime(new Date());
         }, 1000);
         return () => {
             clearInterval(intervalId);
@@ -18,7 +16,7 @@ const Timer = () => {
 
     return (
         <div className="timer">
-            <p className="timer__paragraph">{time}</p>
+            <p className="timer__paragraph">{time.toLocaleString()}</p>
         </div>
     )
 };
