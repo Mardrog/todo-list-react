@@ -4,7 +4,8 @@ import "./style.css";
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
     tasks.length > 0 && (
         <div className="section__buttonsContainer">
-            <button onClick={toggleHideDone}
+            <button onClick=
+                {toggleHideDone}
                 className="section__buttons section__buttons--leftButton">
                 {hideDone === true ? "Pokaż ukończone" : "Ukryj ukończone"}
             </button>
