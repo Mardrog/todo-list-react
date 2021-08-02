@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./style.css";
+import { StyledDateContainer, StyledDate } from "./styled"
 
 const Timer = () => {
 
@@ -15,9 +15,9 @@ const Timer = () => {
     }, []);
 
     return (
-        <div className="timer">
-            <p className="timer__paragraph">{time.toLocaleString()}</p>
-        </div>
+        <StyledDateContainer>
+            <StyledDate>{time.toLocaleString()}</StyledDate>
+        </StyledDateContainer>
     )
 };
 
