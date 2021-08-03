@@ -1,12 +1,12 @@
-import "./style.css";
+import { StyledSectionContainer, StyledHeader } from "./styled";
 
 const Section = ({ header, buttonsContainer, formContainer, tasksContainer, timer }) => (
     <section className="section">
-        <div className="section__container">
-            <h2 className="section__header">{header}</h2>
+        <StyledSectionContainer className="section__container">
+            <StyledHeader className="section__header">{header}</StyledHeader>
             {timer}
             {buttonsContainer}
-        </div>
+        </StyledSectionContainer>
         {formContainer}
         {tasksContainer}
     </section>

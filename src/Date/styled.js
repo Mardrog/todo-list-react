@@ -5,10 +5,11 @@ export const StyledDateContainer = styled.div`
     font-size: 20px;
 
     @media (max-width:675px) {
-       align-self: flex-end;
+       align-self: center;
     }
 `;
 
 export const StyledDate = styled.p`
     color:teal;
+
 `;
