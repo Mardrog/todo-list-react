@@ -1,9 +1,9 @@
 import { StyledSectionContainer, StyledHeader } from "./styled";
 
 const Section = ({ header, buttonsContainer, formContainer, tasksContainer, timer }) => (
-    <section className="section">
-        <StyledSectionContainer className="section__container">
-            <StyledHeader className="section__header">{header}</StyledHeader>
+    <section>
+        <StyledSectionContainer>
+            <StyledHeader>{header}</StyledHeader>
             {timer}
             {buttonsContainer}
         </StyledSectionContainer>

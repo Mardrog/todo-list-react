@@ -25,7 +25,7 @@ const Form = ({ addNewTask }) => {
                 value={content}
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <StyledNewTaskButton className="section__newTaskButton">Dodaj zadanie</StyledNewTaskButton>
+            <StyledNewTaskButton>Dodaj zadanie</StyledNewTaskButton>
         </StyledForm>
     );
 }
