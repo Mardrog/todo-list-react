@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledForm = styled.form`
-    background-color: white;
+    background-color: ${({ theme }) => theme.colors.backgroundColor};
     display: flex;
     padding: 20px;
     margin-bottom: 10px;
@@ -19,7 +19,7 @@ export const StyledInput = styled.input`
     flex-grow: 1;
     border: 1px solid #dddd;
 
-    @media (max-width:580px){
+    @media (max-width:${({ theme }) => theme.breakpoints.smallerMobile}px){
         margin: 10px;
     }
 `;
@@ -27,12 +27,12 @@ export const StyledInput = styled.input`
 export const StyledNewTaskButton = styled.button`
     padding: 10px 30px 10px 30px;
     color: white;
-    background-color: hsl(180, 100%, 25%);
+    background-color: ${({ theme }) => theme.colors.newTaskButtonColor};
     border: none;
     transition: 0.5s;
     
     &:hover{
-        background-color: hsl(180, 100%, 35%);
+        background-color: ${({ theme }) => theme.colors.newTaskButtonHoverColor};
         transform: scale(1.1);
     }
 

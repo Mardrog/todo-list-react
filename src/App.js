@@ -6,6 +6,8 @@ import Container from "./Container";
 import Header from "./Header";
 import Timer from "./Date";
 import { useState, useEffect } from "react";
+import { ThemeProvider } from "styled-components"
+import { blueTheme, redTheme } from "./themes";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
@@ -54,42 +56,44 @@ function App() {
   };
 
   return (
-    <Container>
-      <Header
-        title="Lista zadań"
-      />
-      <Section
-        timer={
-          <Timer />
-        }
-        header="Dodaj nowe zadanie"
-        formContainer={
-          <Form
-            addNewTask={addNewTask}
-            tasks={tasks}
-            setTasks={setTasks}
-          />
-        }
-      />
-      <Section
-        header="Lista zadań"
-        buttonsContainer={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            setAllDone={setAllDone}
-          />}
-        tasksContainer={
-          <Tasks
-            tasks={tasks}
-            hideDone={hideDone}
-            removeTask={removeTask}
-            toggleTaskDone={toggleTaskDone}
-          />
-        }
-      />
-    </Container>
+    <ThemeProvider theme={redTheme}>
+      <Container>
+        <Header
+          title="Lista zadań"
+        />
+        <Section
+          timer={
+            <Timer />
+          }
+          header="Dodaj nowe zadanie"
+          formContainer={
+            <Form
+              addNewTask={addNewTask}
+              tasks={tasks}
+              setTasks={setTasks}
+            />
+          }
+        />
+        <Section
+          header="Lista zadań"
+          buttonsContainer={
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+              setAllDone={setAllDone}
+            />}
+          tasksContainer={
+            <Tasks
+              tasks={tasks}
+              hideDone={hideDone}
+              removeTask={removeTask}
+              toggleTaskDone={toggleTaskDone}
+            />
+          }
+        />
+      </Container>
+    </ThemeProvider>
   );
 }
 

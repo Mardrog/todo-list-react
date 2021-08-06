@@ -1,12 +1,11 @@
 import styled, { css } from "styled-components";
-import { theme } from "../Theme/styled.js";
 
 export const StyledButtonContainer = styled.div`
     background-color: white;
     padding: 20px;
     border-bottom: 1px solid #dddddd;
 
-    @media (max-width:675px) {
+    @media (max-width:${({ theme }) => theme.breakpoints.mobile}px) {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -24,22 +23,20 @@ export const StyledButtons = styled.button`
     ${({ left }) => left && css`
     padding-right: 30px;
 
-    @media (max-width:675px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         padding: 0px;
         margin-bottom: 30px;
     }
     `}
 
     &:hover {
-        color: hsl(180, 100%, 45%);
+        color: ${({ theme }) => theme.colors.hoverColor};
     }
 
     &:disabled {
-    color: hsl(0,0%,90%);
+    color: ${({ theme }) => theme.colors.disabledColor};
     font-size: 20px;
     border: none;
     background: none;
     }
-  
-    
 `;
