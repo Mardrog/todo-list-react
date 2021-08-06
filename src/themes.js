@@ -19,7 +19,7 @@ const redTheme = {
         mainColor: "hsl(0, 100%, 60%)",
         hoverColor: "hsl(0, 100%, 30%)",
         disabledColor: "hsl(0,0%,90%)",
-        dateColor: "red",
+        dateColor: "hsl(0, 100%, 60%)",
         backgroundColor: "white",
         newTaskButtonColor: "hsl(0, 100%, 60%)",
         newTaskButtonHoverColor: "hsl(0, 100%, 30%)",

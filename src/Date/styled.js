@@ -10,5 +10,5 @@ export const StyledDateContainer = styled.div`
 `;
 
 export const StyledDate = styled.p`
-    color: hsl(180, 100%, 25%);
+    color: ${({ theme }) => theme.colors.dateColor};
 `;
