@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { theme } from "../Theme/styled.js";
 
 export const StyledButtonContainer = styled.div`
     background-color: white;
@@ -17,7 +18,7 @@ export const StyledButtons = styled.button`
     font-size: 20px;
     border: none;
     background: none;
-    color: hsl(180, 100%, 35%);
+    color: ${({ theme }) => theme.colors.mainColor};
     transition: 0.5s;
 
     ${({ left }) => left && css`
@@ -29,15 +30,16 @@ export const StyledButtons = styled.button`
     }
     `}
 
+    &:hover {
+        color: hsl(180, 100%, 45%);
+    }
+
     &:disabled {
     color: hsl(0,0%,90%);
     font-size: 20px;
     border: none;
     background: none;
-    pointer-events:none;
     }
   
-    &:hover {
-        color: hsl(180, 100%, 45%);
-    }
+    
 `;
